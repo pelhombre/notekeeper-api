@@ -27,3 +27,9 @@ npm run dev:watch
 ## License:
 
 This project is licensed under the MIT License, granting users the freedom to use, modify, and distribute the software as they see fit. See the LICENSE file in the repository for more details.
+
+---
+
+[![SonarCloud](https://sonarcloud.io/images/project_badges/sonarcloud-black.svg)](https://sonarcloud.io/summary/new_code?id=DAW-EPIA-MAT_notekeeper-api)
+
+[![Quality Gate Status](https://sonarcloud.io/api/project_badges/measure?project=DAW-EPIA-MAT_notekeeper-api&metric=alert_status)](https://sonarcloud.io/summary/new_code?id=DAW-EPIA-MAT_notekeeper-api)
