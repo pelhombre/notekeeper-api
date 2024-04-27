@@ -1,4 +1,4 @@
-import { generatePrefixedID } from "../utils/Index.js";
+import { generatePrefixedID } from "../utils/index.js";
 
 const STATUS = {
   PENDING: "pending",
