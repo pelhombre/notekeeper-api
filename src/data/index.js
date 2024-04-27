@@ -9,7 +9,6 @@ const STATUS = {
 const notes = [
   {
     _id: generatePrefixedID(),
-    _id: "123",
     name: "Walk the dog",
     description: "Go to the park",
     important: false,
