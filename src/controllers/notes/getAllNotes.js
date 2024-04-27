@@ -1,10 +1,13 @@
-import notes from "../../data/index.js";
 import { noteMapper } from "../../mappers/index.js";
 
-const getAllNotes = (_req, res) => {
-  const notesDTO = notes.map(noteMapper.toDTO);
+const getAllNotes = (repository) => {
+  return (_req, res) => {
+    const notes = repository.getAllNotes();
 
-  return res.json({ notes: notesDTO });
+    const notesDTO = notes.map(noteMapper.toDTO);
+
+    return res.json({ notes: notesDTO });
+  };
 };
 
 export default getAllNotes;
