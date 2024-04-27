@@ -18,7 +18,7 @@ const deleteNote = (req, res) => {
   const [deletedNote] = notes.splice(elementIndex, 1);
   const deletedNoteDTO = noteMapper.toDTO(deletedNote);
 
-  return res.status(200).json({ note: deletedNoteDTO });
+  return res.status(200).json(deletedNoteDTO);
 };
 
 export default deleteNote;
