@@ -1,11 +1,11 @@
-const express = require("express");
-const cors = require("cors");
+import cors from "cors";
+import express, { json } from "express";
 
-const { healthRouter, notesRouter } = require("./src/router");
+import { healthRouter, notesRouter } from "./src/router/index.js";
 
 const app = express();
 
-app.use(express.json());
+app.use(json());
 app.use(cors());
 
 app.use("/health", healthRouter);

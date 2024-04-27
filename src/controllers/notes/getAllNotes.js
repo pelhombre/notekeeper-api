@@ -1,5 +1,5 @@
-const notes = require("../../data");
-const { noteMapper } = require("../../mappers");
+import notes from "../../data/index.js";
+import { noteMapper } from "../../mappers/index.js";
 
 const getAllNotes = (_req, res) => {
   const notesDTO = notes.map(noteMapper.toDTO);
@@ -7,4 +7,4 @@ const getAllNotes = (_req, res) => {
   return res.json({ notes: notesDTO });
 };
 
-module.exports = getAllNotes;
+export default getAllNotes;

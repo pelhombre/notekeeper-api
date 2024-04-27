@@ -1,9 +1,9 @@
-const express = require("express");
+import { Router } from "express";
 
-const healthRouter = express.Router();
+const healthRouter = Router();
 
 healthRouter.get("/", (_req, res) => {
   res.send("ok");
 });
 
-module.exports = healthRouter;
+export default healthRouter;

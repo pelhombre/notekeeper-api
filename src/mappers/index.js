@@ -1,5 +1,3 @@
-const noteMapper = require("./noteMapper");
+import noteMapper from "./noteMapper.js";
 
-module.exports = {
-  noteMapper,
-};
+export { noteMapper };

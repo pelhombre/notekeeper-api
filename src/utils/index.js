@@ -1,7 +1,4 @@
-const generatePrefixedID = require("./generateID");
-const checkElementExistsBasedOn = require("./checkElementExistsBasedOn");
+import checkElementExistsBasedOn from "./checkElementExistsBasedOn.js";
+import generatePrefixedID from "./generateID.js";
 
-module.exports = {
-  generatePrefixedID,
-  checkElementExistsBasedOn,
-};
+export { checkElementExistsBasedOn, generatePrefixedID };
