@@ -1,6 +1,6 @@
-const notes = require("../../data");
-const { noteMapper } = require("../../mappers");
-const { checkElementExistsBasedOn } = require("../../utils");
+import notes from "../../data/index.js";
+import { noteMapper } from "../../mappers/index.js";
+import { checkElementExistsBasedOn } from "../../utils/index.js";
 
 const deleteNote = (req, res) => {
   const { id: noteId } = req.params;
@@ -21,4 +21,4 @@ const deleteNote = (req, res) => {
   return res.status(200).json({ note: deletedNoteDTO });
 };
 
-module.exports = deleteNote;
+export default deleteNote;

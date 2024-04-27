@@ -1,7 +1,4 @@
-const healthRouter = require("./health");
-const notesRouter = require("./notes");
+import healthRouter from "./health/index.js";
+import notesRouter from "./notes/index.js";
 
-module.exports = {
-  healthRouter,
-  notesRouter,
-};
+export { healthRouter, notesRouter };

@@ -2,10 +2,11 @@
   "name": "13_express-rest-api",
   "version": "1.0.0",
   "description": "",
+  "type": "module",
   "main": "index.js",
   "scripts": {
-    "dev": "node index.js",
-    "dev:watch": "node --watch index.js",
+    "dev": "node --env-file=.env index.js",
+    "dev:watch": "node --watch --env-file=.env index.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "keywords": [],

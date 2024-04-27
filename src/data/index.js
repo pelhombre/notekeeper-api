@@ -1,4 +1,4 @@
-const { generatePrefixedID } = require("../utils/");
+import { generatePrefixedID } from "../utils/Index.js";
 
 const STATUS = {
   PENDING: "pending",
@@ -9,7 +9,6 @@ const STATUS = {
 const notes = [
   {
     _id: generatePrefixedID(),
-    _id: "123",
     name: "Walk the dog",
     description: "Go to the park",
     important: false,
@@ -19,4 +18,4 @@ const notes = [
   },
 ];
 
-module.exports = notes;
+export default notes;

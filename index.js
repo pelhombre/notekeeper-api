@@ -1,9 +1,7 @@
-require("dotenv").config();
+import cors from "cors";
+import express from "express";
 
-const express = require("express");
-const cors = require("cors");
-
-const { healthRouter, notesRouter } = require("./src/router");
+import { healthRouter, notesRouter } from "./src/router/index.js";
 
 const app = express();
 

@@ -18,4 +18,4 @@ function generatePrefixedID() {
   return `${randomPrefix}-${Date.now()}`;
 }
 
-module.exports = generatePrefixedID;
+export default generatePrefixedID;

@@ -1,6 +1,6 @@
-const notes = require("../../data");
-const { noteMapper } = require("../../mappers");
-const { checkElementExistsBasedOn } = require("../../utils");
+import notes from "../../data/index.js";
+import { noteMapper } from "../../mappers/index.js";
+import { checkElementExistsBasedOn } from "../../utils/index.js";
 
 const updateNote = (req, res) => {
   const noteContent = req.body;
@@ -28,4 +28,4 @@ const updateNote = (req, res) => {
   return res.status(200).json(updatedNoteDTO);
 };
 
-module.exports = updateNote;
+export default updateNote;

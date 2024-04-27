@@ -7,4 +7,4 @@ const noteMapper = {
   toDTO,
 };
 
-module.exports = noteMapper;
+export default noteMapper;

@@ -1,11 +1,6 @@
-const getAllNotes = require("./notes/getAllNotes");
-const createNote = require("./notes/createNote");
-const updateNote = require("./notes/updateNote");
-const deleteNote = require("./notes/deleteNote");
+import createNote from "./notes/createNote.js";
+import deleteNote from "./notes/deleteNote.js";
+import getAllNotes from "./notes/getAllNotes.js";
+import updateNote from "./notes/updateNote.js";
 
-module.exports = {
-  getAllNotes,
-  createNote,
-  updateNote,
-  deleteNote,
-};
+export { createNote, deleteNote, getAllNotes, updateNote };
