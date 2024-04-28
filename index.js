@@ -1,7 +1,7 @@
 import cors from "cors";
 import express from "express";
 
-import { healthRouterIoC, notesRouter } from "./src/router/index.js";
+import { healthRouterIoC, notesRouterIoC } from "./src/router/index.js";
 
 const app = express();
 
@@ -9,8 +9,7 @@ app.use(express.json());
 app.use(cors());
 
 healthRouterIoC(app);
-
-app.use("/notes", notesRouter);
+notesRouterIoC(app);
 
 const PORT = process.env.PORT ?? 3001;
 

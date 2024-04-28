@@ -8,13 +8,22 @@ import {
 } from "../../controllers/index.js";
 import notes from "../../data/index.js";
 
-const notesRouter = Router();
+const createNotesRouter = () => {
+  const notesRouter = Router();
 
-const repository = inMemoryNotesRepository(notes);
+  const repository = inMemoryNotesRepository(notes);
 
-notesRouter.get("/", getAllNotes(repository));
-notesRouter.post("/", createNote(repository));
-notesRouter.put("/:id", updateNote(repository));
-notesRouter.delete("/:id", deleteNote(repository));
+  notesRouter.get("/", getAllNotes(repository));
+  notesRouter.post("/", createNote(repository));
+  notesRouter.put("/:id", updateNote(repository));
+  notesRouter.delete("/:id", deleteNote(repository));
 
-export default notesRouter;
+  return notesRouter;
+};
+
+const notesRouterIoC = (app) => {
+  const notesRouter = createNotesRouter();
+  app.use("/notes", notesRouter);
+};
+
+export default notesRouterIoC;
