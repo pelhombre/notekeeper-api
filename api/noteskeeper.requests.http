@@ -3,6 +3,7 @@ GET http://localhost:8080/notes
 
 ### create a note
 POST  http://localhost:8080/notes
+# headers
 Content-Type: application/json
 
 # request body
@@ -15,12 +16,14 @@ Content-Type: application/json
 }
 
 ### update a note
-PUT  http://localhost:8080/notes/eMMbH-1714335990902
+PUT  http://localhost:8080/notes/sBHLr-1714336266170
+# headers
 Content-Type: application/json
 
+# request body
 {
 	"status": "in progress"
 }
 
 ### delete a note
-DELETE  http://localhost:8080/notes/eMMbH-1714335990902
+DELETE  http://localhost:8080/notes/sBHLr-1714336266170
