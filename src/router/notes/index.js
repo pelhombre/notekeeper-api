@@ -23,6 +23,7 @@ const createNotesRouter = () => {
 
 const notesRouterIoC = (app) => {
   const notesRouter = createNotesRouter();
+
   app.use("/notes", notesRouter);
 };
 
