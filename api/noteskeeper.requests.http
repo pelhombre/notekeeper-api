@@ -1,0 +1,26 @@
+### get all notes
+GET http://localhost:8080/notes
+
+### create a note
+POST  http://localhost:8080/notes
+Content-Type: application/json
+
+# request body
+{
+	"name": "Wash dishes",
+	"description": "Washing machine is out of order",
+	"important": true,
+	"status": "pending",
+	"dueDate": "1/1/2024"
+}
+
+### update a note
+PUT  http://localhost:8080/notes/eMMbH-1714335990902
+Content-Type: application/json
+
+{
+	"status": "in progress"
+}
+
+### delete a note
+DELETE  http://localhost:8080/notes/eMMbH-1714335990902
