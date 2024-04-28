@@ -1,9 +1,19 @@
 import { Router } from "express";
 
-const healthRouter = Router();
+const createRouter = () => {
+  const healthRouter = Router();
 
-healthRouter.get("/", (_req, res) => {
-  res.send("ok");
-});
+  healthRouter.get("/", (_req, res) => {
+    res.send("OK");
+  });
 
-export default healthRouter;
+  return healthRouter;
+};
+
+const healthRouterIoC = (app) => {
+  const healthRouter = createRouter();
+
+  app.use("/health", healthRouter);
+};
+
+export default healthRouterIoC;
