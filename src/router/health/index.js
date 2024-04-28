@@ -1,6 +1,6 @@
 import { Router } from "express";
 
-const createRouter = () => {
+const createHealthRouter = () => {
   const healthRouter = Router();
 
   healthRouter.get("/", (_req, res) => {
@@ -11,7 +11,7 @@ const createRouter = () => {
 };
 
 const healthRouterIoC = (app) => {
-  const healthRouter = createRouter();
+  const healthRouter = createHealthRouter();
 
   app.use("/health", healthRouter);
 };
