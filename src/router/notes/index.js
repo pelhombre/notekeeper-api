@@ -1,5 +1,5 @@
 import { Router } from "express";
-import { inMemoryNotesRepository } from "../../../repositories/index.js";
+
 import {
   createNote,
   deleteNote,
@@ -7,6 +7,7 @@ import {
   updateNote,
 } from "../../controllers/index.js";
 import notes from "../../data/index.js";
+import { inMemoryNotesRepository } from "../../repositories/inMemoryNotesRepository.js";
 
 const createNotesRouter = () => {
   const notesRouter = Router();
