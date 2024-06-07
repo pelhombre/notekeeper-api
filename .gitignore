@@ -8,3 +8,5 @@ node_modules/
 
 ### ENV ###
 .env
+.env.production
+.env.development
